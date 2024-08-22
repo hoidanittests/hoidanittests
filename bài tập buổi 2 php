@@ -1,0 +1,3 @@
+<?php>
+// Viết một chương trình PHP để đếm số ký tự trong một chuỗi sử dụng hàm strlen().
+
