@@ -25,6 +25,31 @@ $chuoi_con_cu = "thay thế"; //định nghĩa chuỗi con cần thay thế
 $chuoi_thay_the = "cập nhật"; //định nghĩa chuỗi thay thế
 $chuoi_moi = str_replace($chuoi_con_cu, $chuoi_thay_the, $chuoi_chinh); // Sử dụng hàm str_replace() để thay thế chuỗi con trong chuỗi chính
 echo "Chuỗi sau khi thay thế là: " . $chuoi_moi; // Hiển thị chuỗi đã thay thế
+
+// 6. Viết một chương trình PHP để kiểm tra xem một chuỗi có bắt đầu bằng một chuỗi con khác không sử dụng hàm strncmp().
+$chuoi_chinh = "Chào bạn, đây là một ví dụ."; //định nghĩa chuỗi chính cần kiểm tra
+$chuoi_con = "Chào bạn"; //định nghĩa chuỗi con cần kiểm tra
+$ket_qua = strncmp($chuoi_chinh, $chuoi_con, strlen($chuoi_con)); //sử dụng hàm strncmp() để kiểm tra xem chuỗi chính có bắt đầu bằng chuỗi con không
+
+// 7. Viết một chương trình PHP để chuyển đổi một chuỗi thành chữ hoa sử dụng hàm strtoupper().
+$chuoi = "Chào bạn, đây là một ví dụ về việc chuyển đổi thành chữ hoa."; // Định nghĩa chuỗi cần chuyển đổi
+$chuoi_chu_hoa = strtoupper($chuoi); // Sử dụng hàm strtoupper() để chuyển đổi chuỗi thành chữ hoa
+echo "Chuỗi chuyển đổi thành chữ hoa là: " . $chuoi_chu_hoa; // Hiển thị chuỗi đã chuyển đổi
+
+// 8. Viết một chương trình PHP để chuyển đổi một chuỗi thành chữ thường sử dụng hàm strtolower().
+$chuoi = "ChÀo BẠn, đâY lÀ mỘt ví dỤ vỀ việc CHuyển đỔI thÀnh chữ thƯờng."; // Định nghĩa chuỗi cần chuyển đổi
+$chuoi_chu_thuong = strtolower($chuoi); // Sử dụng hàm strtolower() để chuyển đổi chuỗi thành chữ thường
+echo "Chuỗi chuyển đổi thành chữ thường là: " . $chuoi_chu_thuong; // Hiển thị chuỗi đã chuyển đổi
+
+// 9. Viết một chương trình PHP để chuyển đổi một chuỗi thành chuỗi in hoa chữ cái đầu tiên của mỗi từ sử dụng hàm ucwords().
+$inputString = "đây là một ví dụ về cách sử dụng hàm ucwords trong php"; //chuỗi đầu vào
+$outputString = ucwords($inputString); // Chuyển đổi chuỗi thành in hoa chữ cái đầu tiên của mỗi từ
+echo $outputString; //hiển thị chuỗi đã chuyển đổi
+
+// 10. Viết một chương trình PHP để loại bỏ khoảng trắng ở đầu và cuối chuỗi sử dụng hàm trim().
+$inputString = "   Đây là một chuỗi có khoảng trắng   "; // Chuỗi đầu vào với khoảng trắng ở đầu và cuối
+$outputString = trim($inputString); // Loại bỏ khoảng trắng ở đầu và cuối chuỗi
+echo $outputString; // In ra chuỗi được loại bỏ khoảng trắng ở đầu và cuối chuỗi
 ?> 
 
 
