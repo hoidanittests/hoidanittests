@@ -50,6 +50,54 @@ echo $outputString; //hiển thị chuỗi đã chuyển đổi
 $inputString = "   Đây là một chuỗi có khoảng trắng   "; // Chuỗi đầu vào với khoảng trắng ở đầu và cuối
 $outputString = trim($inputString); // Loại bỏ khoảng trắng ở đầu và cuối chuỗi
 echo $outputString; // In ra chuỗi được loại bỏ khoảng trắng ở đầu và cuối chuỗi
+
+// 11. Viết một chương trình PHP để loại bỏ ký tự đầu tiên của một chuỗi sử dụng hàm ltrim().
+$inputString = "Ví dụ về chuỗi cần xử lý"; // chuỗi đầu vào
+$outputString = ltrim($inputString, $inputString[0]); // loại bỏ ký tự đầu tiên của chuỗi
+echo $outputString; //in ra chuỗi đã loại bỏ ký tự đầu tiên
+
+// 12. Viết một chương trình PHP để loại bỏ ký tự cuối cùng của một chuỗi sử dụng hàm rtrim().
+$inputString = "Ví dụ về chuỗi cần xử lý"; // chuỗi đầu vào
+$outputString = rtrim($inputString, $inputString[strlen($inputString) - 1]); // loại bỏ ký tự cuối cùng của chuỗi
+echo $outputString; // in ra chuỗi loại bỏ ký tự cuối cùng
+
+// 13. Viết một chương trình PHP để tách một chuỗi thành một mảng các phần tử sử dụng hàm explode().
+$string = "Xin chào, đây là một ví dụ về hàm explode trong PHP"; // chuỗi cần tách
+$delimiter = " "; // ký tự phân tách
+$array = explode($delimiter, $string); // sử dụng hàm explode để tách chuỗi thành mảng
+echo $array; //in ra kết quả
+
+// 14. Viết một chương trình PHP để nối các phần tử của một mảng thành một chuỗi sử dụng hàm implode().
+$array = ["Xin", "chào", "đây", "là", "một", "ví", "dụ", "về", "hàm", "implode", "trong", "PHP"]; // Mảng cần nối thành chuỗi
+$glue = " "; // Ký tự phân cách giữa các phần tử trong chuỗi
+$string = implode($glue, $array); // Sử dụng hàm implode để nối các phần tử của mảng thành chuỗi
+echo $string; // hiển thị kết quả
+
+// 15. Viết một chương trình PHP để thêm một chuỗi vào đầu hoặc cuối của một chuỗi sử dụng hàm str_pad().
+$originalString = "là một ví dụ về hàm str_pad trong PHP"; // chuỗi gốc
+$prefix = "Đây "; // chuỗi muốn thêm vào
+$totalLength = strlen($originalString) + strlen($prefix); // độ dài tổng cộng của chuỗi sau khi thêm vào
+$newString = str_pad($originalString, $totalLength, $prefix, STR_PAD_LEFT); // sử dụng hàm str_pad() để thêm chuỗi vào đầu
+echo $newString; // hiển thị kết quả
+
+// 16. Viết một chương trình PHP để kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con khác không sử dụng hàm strrchr().
+$originalString = "Xin chào, đây là một ví dụ về PHP"; // chuỗi gốc
+$substring = "P"; // chuỗi con cần kiểm tra
+$foundChar = strrchr($originalString, $substring); // Sử dụng hàm strrchr() để tìm ký tự cuối cùng trong chuỗi gốc
+echo ($foundChar === $substring) ? "Chuỗi '$originalString' kết thúc bằng ký tự '$substring'." : "Chuỗi '$originalString' không kết thúc bằng ký tự '$substring'."; // Kiểm tra nếu kết quả trả về từ strrchr() trùng khớp với chuỗi cần kiểm tra
+
+// 17. Viết một chương trình PHP để kiểm tra xem một chuỗi có chứa một chuỗi con khác không sử dụng hàm strstr().
+$originalString = "Xin chào, đây là một ví dụ về PHP"; // chuỗi gốc
+$substring = "ví dụ"; // chuỗi con cần kiểm tra
+$result = strstr($originalString, $substring); // Sử dụng hàm strstr() để kiểm tra chuỗi con trong chuỗi gốc
+echo $result ? "Chuỗi '$originalString' có chứa chuỗi con '$substring'." : "Chuỗi '$originalString' không chứa chuỗi con '$substring'."; // In kết quả, nếu chuỗi con tồn tại, hàm strstr() sẽ trả về phần chuỗi bắt đầu từ chuỗi con, ngược lại trả về false
+
+// 18. Viết một chương trình PHP để thay thế tất cả các ký tự trong một chuỗi không phải là chữ cái hoặc số bằng một ký tự khác sử dụng hàm preg_replace().
+
+// 19. Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một số nguyên hay không sử dụng hàm is_int().
+
+// 20. Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một email hợp lệ hay không sử dụng hàm filter_var().
+
 ?> 
 
 
