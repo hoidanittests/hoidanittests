@@ -1,3 +1,33 @@
 <?php>
-// Viết một chương trình PHP để đếm số ký tự trong một chuỗi sử dụng hàm strlen().
+// 1. Viết một chương trình PHP để đếm số ký tự trong một chuỗi sử dụng hàm strlen().
+$chuoi = "Hello World"; // định nghĩa chuỗi cần đếm số ký tự
+$so_ky_tu = strlen ($chuoi); //sử dụng hàm strlen() để đếm số ký tự 
+echo "Số ký tự trong chuỗi là: " . $so_ky_tu; //hiển thị số ký tự trong chuỗi
+
+// 2. Viết một chương trình PHP để đếm số từ trong một chuỗi sử dụng hàm str_word_count().
+$chuoi = "Tôi thích ăn chuối"; // định nghĩa chuỗi cần đếm số từ
+$so_tu = str_word_count ($chuoi); //sử dụng hàm str_word_count() để đếm số từ
+echo "Số từ trong chuỗi là: " . $so_tu; //hiển thị số từ trong chuỗi
+
+// 3. Viết một chương trình PHP để đảo ngược một chuỗi sử dụng hàm strrev().
+$chuoi = "Hello my friends"; //định nghĩa chuỗi cần đảo ngược 
+$chuoi_dao_nguoc = strrev ($chuoi); //sử dụng hàm strrev() để đảo ngược chuỗi
+echo "Chuỗi đảo ngược là: " . $chuoi_dao_nguoc; //hiển thị chuỗi đảo ngược 
+
+// 4. Viết một chương trình PHP để tìm kiếm một chuỗi con trong một chuỗi sử dụng hàm strpos().
+$chuoi_chinh = "Đây là ví dụ mà bạn cần hoàn thiện ngay lập tức"; //định nghĩa chuỗi chính 
+$chuoi_con = "ví dụ"; //định nghĩa chuỗi con
+$vi_tri = strpos ($chuoi_chinh; $chuoi_con); //sử dụng hàm strpos() để tìm kiếm chuỗi con trong chuỗi chính
+
+// 5. Viết một chương trình PHP để thay thế một chuỗi con trong một chuỗi bằng một chuỗi khác sử dụng hàm str_replace().
+$chuoi_chinh = "Chào bạn, đây là một ví dụ về việc thay thế chuỗi con."; //định nghĩa chuỗi chính
+$chuoi_con_cu = "thay thế"; //định nghĩa chuỗi con cần thay thế
+$chuoi_thay_the = "cập nhật"; //định nghĩa chuỗi thay thế
+$chuoi_moi = str_replace($chuoi_con_cu, $chuoi_thay_the, $chuoi_chinh); // Sử dụng hàm str_replace() để thay thế chuỗi con trong chuỗi chính
+echo "Chuỗi sau khi thay thế là: " . $chuoi_moi; // Hiển thị chuỗi đã thay thế
+?> 
+
+
+
+
 
