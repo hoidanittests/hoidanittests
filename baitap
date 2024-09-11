@@ -1,0 +1,51 @@
+CREATE TABLE IF NOT EXISTS my_contacts (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  full_names varchar(255) NOT NULL,
+  gender varchar(6) NOT NULL,
+  contact_no varchar(75) NOT NULL,
+  email varchar(255) NOT NULL,
+  city varchar(255) NOT NULL,
+  country varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE = InnoDB  DEFAULT CHARSET = latin1 AUTO_INCREMENT = 5 ;
+INSERT INTO my_contacts (
+    id,
+    full_names,
+    gender,
+    contact_no,
+    email,
+    city,
+    country)
+VALUES
+(1, 'Zeus', 'Male', '111', 'zeus@olympus.mt.co', 'Agos', 'Greece'),
+(2, 'Anthena', 'Female', '123', 'anthena@olympus.mt.co', 'Athens', 'Greece'),
+(3, 'Jupiter', 'Male', '783', 'jupiter@planet.pt.co', 'Rome', 'Italy'),
+(4, 'Venus', 'Female', '987', 'venu @planet.pt.co', 'Mars', 'Italy');
+
+<?php
+$dbh = mysqli_connect('localhost', 'root', '123456', 'in4');
+// Kết nối tới MySQL server
+if (!$dbh)
+    die("Unable to connect to MySQL: " . mysqli_connect_error());
+// Nếu kết nối thất bại thì đưa ra thông báo lỗi
+$sql_stmt = "SELECT * FROM my_contacts";
+// Câu lệnh select
+$result = mysqli_query($dbh, $sql_stmt);
+// Thực thi câu lệnh SQL
+if (!$result)
+    die("Database access failed: " . mysqli_connect_error());
+// Thông báo lỗi nếu thực thi thất bại
+$rows = mysqli_num_rows($result);
+// Lấy số hàng trả về
+if ($rows) {
+    while ($row = mysqli_fetch_array($result)) {
+        echo 'ID: ' . $row['id'] . '<br>';
+        echo 'Full Names: ' . $row['full_names'] . '<br>';
+        echo 'Gender: ' . $row['gender'] . '<br>';
+        echo 'Contact No: ' . $row['contact_no'] . '<br>';
+        echo 'Email: ' . $row['email'] . '<br>';
+        echo 'City: ' . $row['city'] . '<br>';
+        echo 'Country: ' . $row['country'] . '<br><br>';
+    }
+}
+mysqli_close($dbh); // Đóng kết nối CSDL
